@@ -1,0 +1,20 @@
+<div id="contenttext">
+  <h1>My Planner</h1>
+</div>
+        
+<div class="maincontent-inner">
+
+  <%= render( :partial => "planner", 
+  :locals => {:heading => "Student Record", 
+  :help_text => "Classes that were taken",
+  :plan_page => false,
+  :planners => @p_planners}) %>
+  
+  <%= render( :partial => "planner", 
+  :locals => {:heading => "Student Planner",
+  :help_text => "Classes that you will take",
+  :plan_page => false,
+  :planners => @f_planners}) %>
+
+</div>
+	

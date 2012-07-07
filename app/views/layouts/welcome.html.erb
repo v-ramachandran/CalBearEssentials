@@ -1,0 +1,54 @@
+<!-- Welcome Page has its own layout file because it is a completely
+     different page layout concept from the rest of the site -->
+
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>BearEssentials</title>
+    <%= stylesheet_link_tag "reset" %>
+    <%= stylesheet_link_tag "welcome" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+
+  </head>
+  <body style="color:#fc2">
+  <div id="wrapper">
+
+    <%= image_tag "background.jpg", :class=>"bg" %>
+
+    <% [:notice, :error].each do |key| %>
+       <% if flash[key] %>
+          <div class="flash_<%= key %>">
+                <p> <%= flash[key] %> </p>
+          </div>
+       <% end %>
+    <% end %>
+
+    <div id="floater"> </div>
+
+    <div id="home-page-content">
+       <%= yield %>
+    </div>
+
+  </div>
+
+<!--
+    <div class="frame backlayer"> </div>
+
+    <div class="frame">
+
+    <div class="menuLayer">
+      <table id="menubar" class="menu">
+        <tr>
+          <td><%= link_to "About Us", about_path %></td>
+          <td><%= link_to "Contact Us", contact_path %></td>
+          <td><a href="http://www.berkeley.edu/"> Visit UC Berkeley </a></td>
+        </tr>
+      </table>
+      </div>
+      <%= yield %>
+            </div>
+  -->
+        </body>
+</html>

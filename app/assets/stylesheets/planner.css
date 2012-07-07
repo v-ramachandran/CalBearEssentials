@@ -1,0 +1,37 @@
+span.delete-class {
+    float: right;
+    clear: both;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.requirement-ul {
+    margin: 15px 0 auto;
+}
+
+.req_li {
+}
+
+.req_name {
+    font-size: 1.4em;
+}
+
+.green {
+    text-shadow: 1px 1px 1px #ccc;
+    color: green;
+}
+
+.yellow {
+    text-shadow: 1px 1px 1px #ccc;
+    color: #FFA500;
+}
+
+.red {
+    text-shadow: 1px 1px 1px #ccc;
+    color: red;
+}
+
+#fulfillments-container {
+    width: 600px;
+    margin: 0px auto;
+}

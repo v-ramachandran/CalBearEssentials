@@ -1,0 +1,2 @@
+class CourseRequirement < Requirement
+end

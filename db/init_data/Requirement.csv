@@ -1,0 +1,8 @@
+name,units,type
+EECS Core Courses,5,CourseRequirement
+CS Core Courses,4,CourseRequirement
+Upper Div EECS Electives,6,CourseRequirement
+Senior Design Class,1,CourseRequirement
+Upper Div EECS Electives Units,20,UnitRequirement
+Technical Engineering Courses,45,UnitRequirement
+Upper Div CS Electives,5,CourseRequirement

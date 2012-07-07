@@ -1,0 +1,2 @@
+class PastPlanner < Planner
+end

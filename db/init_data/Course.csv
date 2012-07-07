@@ -1,0 +1,14 @@
+abb,name,department,units,weight
+CS 61A,Struct and Interpret of Comp Prog,cs,4,1
+CS 61B,Intro to Data Structures,cs,4,1
+CS 61C,Machine Structures,cs,4,1
+EE 20N,Signals and Systems,ee,4,1
+EE 40,Intro to Micro-electronics,ee,4,1
+CS 70,Discrete Math,cs,4,1
+CS 161,Security,cs,4,1
+CS 162,Operating Systems,cs,4,1
+CS 169,Software Engineering,cs,4,1
+CS 199,Independent Research,cs,2,1
+CS 194-16,Intro To Data Sciences,cs,3,1
+EECS 150,Design Tech for Dig Systems,eecs,5,1
+CS 152,Computer Architecture,CS,5,1

@@ -1,0 +1,104 @@
+/* This stylesheet exists to remove all the annoying browser defaults, and
+   allow to design with a common base layer. Specifc blocks should not
+   appear in this stylesheet. */
+:link,
+:visited { 
+    text-decoration:none 
+}
+
+ul, ol { 
+    list-style:none;
+    margin: 2px 0 0 5px;
+}
+
+li {
+
+}
+
+h1,h2,h3,h4,h5,h6,pre,code { 
+    font-size:1em; 
+}
+
+* { margin:0; padding:0 }
+
+a img,:link img,:visited img { border:none }
+
+address { font-style:normal }
+
+/* Have classes by default for floated objects */
+
+.clear {
+    clear:both;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+/* Set up defaults for the body */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;*/
+    font-size: 65.5%;
+    color: #000000;
+    text-align:left;
+}
+
+/* Typography: Now we know that the default font is 10px, lets size up */
+h1 { font-size: 2.2em; }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+p { font-size: 1.2em; }
+a { font-size: 1.1em; }
+
+h1, h2, h3 {
+    font-family: "proxima-nova-soft-1","proxima-nova-soft-2", "Myriad Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 12px; 
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Default for forms */
+
+input, select {
+    padding: 3px;
+    margin: 5px 0 5px 0;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+.flash_notice {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(143, 227, 59, 0.85);
+}
+
+.flash_notice p{
+    margin: 0;
+    color: black;
+    text-shadow: 1px 1px 1px grey;
+}
+.flash_error {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(150, 0, 10, 0.85);
+}
+.flash_error p{
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 1px grey;
+
+}

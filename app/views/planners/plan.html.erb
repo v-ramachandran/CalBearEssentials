@@ -1,0 +1,33 @@
+<div id="contenttext">
+  <h1>Browse Classes and Plan</h1>
+  
+  <%= form_tag("/planners/add", :method => "post") do %>
+    
+  	<%= label '', 'Select a Semester' %>
+	<%= select :sid, '', @semesters.collect { |s| [s.semester + " " + s.year.to_s(), s.id] }.insert(0, '') %>
+  
+  	<%= label '', 'Select a Course' %>
+  	<%= select :cid, '', @courses.collect { |c| [c.abb.to_s.gsub("_"," ")+" "+c.name.gsub("_"," "), c.id ] }.insert(0, '') %>
+  	
+  	<%= label '', 'Select a Planner'%>
+  	<%= select :pname, '', ['Record', 'Planner'].insert(0, '') %>
+  
+  	<%=submit_tag 'Submit' %>
+  <% end %>  
+</div>
+
+<div class="maincontent-inner">
+  
+  <%= render( :partial => "planner", 
+  :locals => {:heading => "Student Record", 
+  :help_text => "Classes that were taken",
+  :plan_page => true,
+  :planners => @p_planners}) %>
+  
+  <%= render( :partial => "planner", 
+  :locals => {:heading => "Student Planner",
+  :help_text => "Classes that you will take",
+  :plan_page => true,
+  :planners => @f_planners}) %>
+  
+</div>

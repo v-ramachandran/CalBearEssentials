@@ -1,0 +1,2 @@
+class UnitRequirement < Requirement
+end

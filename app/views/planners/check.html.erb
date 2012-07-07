@@ -1,0 +1,81 @@
+<div id="contenttext">
+  <h1>Check Requirements Fullfillment</h1>
+  <h3><%= link_to 'Print Report', "check.pdf"%></h3>
+  <h5> The Degree you are pursuing is: <%= @user.degree.name %></h5>
+
+  <div id="fulfillments-container">
+
+    <% @course_reqs.each do |r_name, info| %>
+    <ul class="requirement-ul"> 
+      <li class="req_li">
+
+	<h6>
+      <% if info[2] %>
+      <span class="req_name green">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% elsif info[1] == 0 %>
+      <span class="req_name red">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% else %>
+      <span class="req_name yellow">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% end %>
+
+      
+	<span class="delete-class">Units</span>
+	</h6> 
+	<ul> 
+	  <% course_arr = info[0] %>
+	  <% course_arr.each do |c| %>
+	  <li> <%= "#{c["abb"]} - #{c["name"]} " %> 
+	  <span class="delete-class"> <%= c["units"].to_s %> </span> </li>
+	  <% end %>
+	</ul>
+      </li> 
+    </ul>
+    <% end %>
+
+    <% @unit_reqs.each do |r_name, info| %>
+    <ul class="requirement-ul"> 
+      <li class="req_li">
+
+	<h6>
+      <% if info[2] %>
+      <span class="req_name green">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% elsif info[1] == 0 %>
+      <span class="req_name red">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% else %>
+      <span class="req_name yellow">
+	<%= r_name + " - " + info[1].to_s + "/" + info[3].to_s + 
+	" courses completed"%> 
+      </span>
+      <% end %>
+
+      
+	<span class="delete-class">Units</span>
+	</h6> 
+	<ul> 
+	  <% course_arr = info[0] %>
+	  <% course_arr.each do |c| %>
+	  <li> <%= "#{c["abb"]} - #{c["name"]} " %>
+	  <span class="delete-class"> <%= c["units"].to_s %> </span> </li>
+	  <% end %>
+	</ul>
+      </li> 
+    </ul>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<h1> <%= link_to image_tag("logo_small.png", :style=>"padding:0px", :alt=>"Logo"), :action=>'index' %> 
+            </a> 
+            Contact Us </h1>
+
+        <div id="contact">
+      
+        <form action="/contact/" method="POST">
+
+            <div class="form_div">
+                <label for="id_name">Name</label><br/>
+                <input class="txtBox" id="id_name" type="text" name="name" maxlength="100" />  
+                <span class="errorlist"></span><br/></br>
+                <div class="help-text"></div>
+            </div>
+            <div class="form_div">
+                <label for="id_email">Email Address</label><br/>
+                <input class="txtBox" type="text" name="email" id="id_email" /> 
+                <span class="errorlist"></span><br/>
+                <div class="help-text"> We will use this address to respond to you. Please make sure it works or we won't be able to help you.</div></br>
+            </div>
+            <div class="form_div">
+                <label for="id_title">Subject</label><br/>
+                <input class="txtBox" id="id_title" type="text" name="title" maxlength="100" /> 
+                <span class="errorlist"></span><br/></br>
+                <div class="help-text"></div>
+            </div>
+            <div class="form_div">
+                <label for="id_body">Comment</label><br/>
+                <textarea class="txtBox" id="id_body" rows="10" cols="40" name="body"></textarea> 
+                <span class="errorlist"></span><br/>
+                <div class="help-text"></div>
+            </div>
+            
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                        <%= link_to image_tag("paws.png", :style=>"padding:0px", :alt=>"Paws"), :action=>'index' %>  
+                        </td>
+                        <td><input class="submitButton" id="submitContact" type="submit" value="Submit" /> </td>
+                    </tr>
+                </table>
+            </div>
+            
+            
+        </form>
+
+
+
+        </div>

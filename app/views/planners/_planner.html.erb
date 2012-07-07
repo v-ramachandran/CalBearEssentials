@@ -1,0 +1,30 @@
+<!-- THIS PARTIAL IS USED TO RENDER THE PLANNERS LIST VIEW -->
+
+<div class="col-2">
+  <div class="center">
+    <h2> <%= heading %> </h2>
+  </div>
+  <hr>
+    <b><%= help_text %></b><br>
+
+
+    <ul>
+      <% planners.first.each do |sem| %>
+      <li> <span class="bold"><%= sem.to_s %></span>
+      <ul>
+
+  <% planners.last[sem].each do |clazz| %>
+  <li> <%= clazz.course.abb.gsub("_"," ") + " - " + clazz.course.name.gsub("_"," ").to_s %>
+  <% if plan_page %>
+  <span class="delete-class">
+  <%= link_to "Delete", planner_path(clazz), :method => :delete %> </span> </li>
+  <% end %>
+  <% end %>
+
+      </ul>
+      </li>
+      <% end %>
+    </ul>
+
+  </div>
+

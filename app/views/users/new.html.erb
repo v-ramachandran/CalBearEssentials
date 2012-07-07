@@ -1,0 +1,41 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag 'new_user' %>
+<% end -%>
+
+<h1>New User Registration</h1>
+
+<p> Please note that all the fields are required. </p>
+
+<div id="register-form">
+<%= form_tag users_path do %>
+<% fb_info = flash[:user_fb_info] %>
+<table> <tbody>
+<tr>
+<td> First Name: </td> 
+<td> <%= text_field_tag :first_name, fb_info ? fb_info["first_name"] : nil %> </td>
+</tr>
+<tr>
+<td> Last Name: </td>
+<td> <%= text_field_tag :last_name, fb_info ? fb_info["last_name"] : nil %> </td>
+</tr>
+<tr>
+<td> E-mail: </td>
+<td> <%= email_field_tag :email, fb_info ? fb_info["email"] : nil %> </td>
+</tr>
+<tr>
+<td> Degree: </td>
+<td> <%= select_tag :degree, options_from_collection_for_select(@degrees, :id, :name) %> </td>
+</tr>
+<tr>
+<td> Start Semester: </td>
+<td> <%= select_tag :start_semester, options_from_collection_for_select(@semesters, :semester, :semester) %> </td>
+</tr>
+<tr>
+<td> Start Year: </td>
+<td> <%= select_tag :start_year, options_from_collection_for_select(@years, :year, :year) %> </td>
+</tr>
+</tbody>
+</table>
+<%= submit_tag "Register!" %>
+<% end %>
+</div>

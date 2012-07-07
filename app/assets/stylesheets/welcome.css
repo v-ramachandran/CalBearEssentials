@@ -1,0 +1,138 @@
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: -60px;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+	left: 50%;
+	margin-left: -512px;   /* 50% */
+	}
+}
+
+
+#wrapper {
+    height: 100%;
+}
+
+/* This floater is used to get the home-page-wrapper to be vertically aligned */
+#floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -150px;
+}
+
+/* TODO: try to get vertical align to work */
+#home-page-content {
+    width: 400px; 
+    /*height: 300px;
+    clear: both;
+    position: relative; /* not sure exactly why */ 
+    text-align: center;
+    margin: auto;
+    background-color: #000; opacity: 0.95;
+    padding: 10px 10px 20px 10px;
+    -moz-box-shadow:    0px 5px 15px  #000;
+    -webkit-box-shadow: 0px 5px 15px  #000;
+    box-shadow:         0px 5px 15px  #000;
+    -moz-border-radius: 0 0 30px 30px;
+    borderradius: 30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+}
+
+#home-page-logo {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.fb-login-box {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3333FF', endColorstr='#191975'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#3333FF), to(#191975)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #3333FF,  #191975); /* for firefox 3.6+ */ 
+    background-color: #3333FF;
+    text-align: center;
+    margin: 5px 120px;
+    padding: 5px;
+    border: thin #222 solid;
+}
+
+.fb-login-box:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#191975', endColorstr='#3333FF'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#191975), to(#3333FF)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #191975,  #3333FF); /* for firefox 3.6+ */ 
+    background-color: #191975;
+}
+
+.fb-login-box a, .fb-login-box a:visited {
+    color: white;
+    font-weight: bold;
+}
+
+/*** ABOUT PAGE ***/
+
+table#namebar td {
+    cursor:pointer;
+    background-color:#424A7E;
+    color:#FFCD35;
+    width: 90px;
+    font-variant:small-caps;
+    font-family:"Arial";
+    text-align:center;
+    padding:10px;
+}
+
+table#namebar td:hover{
+    -webkit-text-shadow:0 0 50px #FFA500;
+    -moz-text-shadow:0 0 50px #FFA500;
+    text-shadow:0 0 50px #FFA500;
+}
+
+#backAbout {
+    padding-top:40px;
+}
+
+
+/*** CONTACT US PAGE ***/
+
+#contact {
+    margin-left: 30px;
+}
+
+.help-text {
+    font-size:10px;
+}
+
+#id_body {
+    height: 70px;
+    width: 400px;
+}
+
+#submitContact {
+    margin-left:160px;
+    margin-top: 10px;
+}
+
+#backContact {
+    padding-top:20px;
+}
+
+
+
+
+
+
+
+

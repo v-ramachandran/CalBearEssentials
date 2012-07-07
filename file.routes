@@ -1,0 +1,17 @@
+      planners GET      /planners(.:format)                      {:action=>"index", :controller=>"planners"}
+               POST     /planners(.:format)                      {:action=>"create", :controller=>"planners"}
+   new_planner GET      /planners/new(.:format)                  {:action=>"new", :controller=>"planners"}
+  edit_planner GET      /planners/:id/edit(.:format)             {:action=>"edit", :controller=>"planners"}
+       planner GET      /planners/:id(.:format)                  {:action=>"show", :controller=>"planners"}
+               PUT      /planners/:id(.:format)                  {:action=>"update", :controller=>"planners"}
+               DELETE   /planners/:id(.:format)                  {:action=>"destroy", :controller=>"planners"}
+          root          /                                        {:controller=>"welcome", :action=>"index"}
+               GET      /index.html(.:format)                    {:controller=>"welcome", :action=>"index"}
+         about GET      /about(.:format)                         {:controller=>"welcome", :action=>"about"}
+       contact GET      /contact(.:format)                       {:controller=>"welcome", :action=>"contact"}
+contact_submit POST     /contact(.:format)                       {:controller=>"welcome", :action=>"submit"}
+         login GET|POST /login(.:format)                         {:controller=>"users", :action=>"login"}
+                        /auth/:provider/callback(.:format)       {:controller=>"sessions", :action=>"create"}
+       signout          /signout(.:format)                       {:controller=>"sessions", :action=>"destroy"}
+  auth_failure          /auth/failure(.:format)                  {:controller=>"sessions", :action=>"failure"}
+    plan_match          /:uid/planner(/:action(/:pid))(.:format) {:controller=>"planners"}
